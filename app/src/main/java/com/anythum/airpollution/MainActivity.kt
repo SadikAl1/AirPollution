@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.anythum.airpollution.ui.screens.AirPollution
+import com.anythum.airpollution.ui.screens.AirPollutionState
 import com.anythum.airpollution.ui.screens.PollutionViewModel
 import com.anythum.airpollution.ui.theme.AirPollutionTheme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     AirPollution(
                         modifier = Modifier.padding(innerPadding),
-                        state = PollutionViewModel,
+                        state = AirPollutionState(),
                         onRefresh = { /*TODO*/ }
                     )
                 }
